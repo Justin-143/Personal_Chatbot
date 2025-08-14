@@ -14,8 +14,8 @@ from typing import Dict, List, Any
 from utils import call_groq_api, call_pollination_ai_api, get_groq_response_text
 
 # --- Streamlit App Initialization ---
-st.set_page_config(page_title="Student & Pro AI Assistant 💡", layout="wide")
-st.title("Student & Pro AI Assistant 💡")
+st.set_page_config(page_title="Pro AI Assistant 💡", layout="wide")
+st.title("Pro AI Assistant 💡")
 
 # --- Sidebar for Navigation ---
 st.sidebar.title("Navigation")
@@ -24,7 +24,7 @@ page = st.sidebar.radio("Go to", ["Chat", "Data Analysis", "Image Generation", "
 # --- Page Logic ---
 
 if page == "Chat":
-    st.header("💬 General Chat")
+    st.header("💬 Smart Chat")
     st.write("Hello! I'm here to help you with your academic and career goals. What would you like to achieve?")
 
     if "messages" not in st.session_state:
@@ -161,3 +161,4 @@ elif page == "Roadmaps":
             f"**[Download Roadmap PDF for {roadmap_goal}](https://example.com/placeholder-roadmap.pdf)**"
         )
         st.warning("Note: The link above is a placeholder. In a complete application, this would point to a real PDF file.")
+
